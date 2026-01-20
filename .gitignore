@@ -1,0 +1,11 @@
+# Bỏ qua các thư mục tạm của Visual Studio
+.vs/
+*.user
+*.suo
+
+# Bỏ qua thư mục build (kết quả biên dịch)
+bin/
+obj/
+
+# Bỏ qua các file cấu hình tạm khác
+packages/
