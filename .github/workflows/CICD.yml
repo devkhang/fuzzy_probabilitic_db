@@ -28,7 +28,8 @@ jobs:
     # 5. Build bằng MSBuild (Thay vì dotnet build)
     - name: Build
       run: msbuild FPRDB/FPRDB.sln 
-
+    - name: Setup VSTest
+      uses: darenm/Setup-VSTest@v1
     # 6. Test
     # Lưu ý: Nếu project Test của bạn cũng là .NET Framework cũ, hãy dùng lệnh này:
     - name: Test
