@@ -8,7 +8,7 @@ on:
 
 jobs:
   build:
-    runs-on: windows-2019 # 1. ĐỔI TỪ UBUNTU SANG WINDOWS
+    runs-on: ubuntu-latest # 1. ĐỔI TỪ UBUNTU SANG WINDOWS
 
     steps:
     - uses: actions/checkout@v4
