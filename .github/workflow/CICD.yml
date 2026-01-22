@@ -1,0 +1,28 @@
+name: .NET Core CI
+
+on:
+  push:
+    branches: [ "main", "develop" ] # Chạy khi push code lên 2 nhánh này
+  pull_request:
+    branches: [ "main" ]         # Chạy khi tạo Pull Request vào main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest # Sử dụng máy ảo Linux để build cho nhẹ và nhanh
+
+    steps:
+    - uses: actions/checkout@v4 # Lấy code từ GitHub về máy ảo
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: '8.0.x' # Cài đặt đúng phiên bản .NET bạn đang dùng
+
+    - name: Restore dependencies
+      run: dotnet restore # Tải các thư viện NuGet
+
+    - name: Build
+      run: dotnet build --no-restore --configuration Release # Biên dịch code
+
+    - name: Test
+      run: dotnet test --no-build --verbosity normal # Chạy Unit Test
