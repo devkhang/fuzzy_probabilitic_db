@@ -2,29 +2,34 @@ name: .NET Core CI
 
 on:
   push:
-    branches: [ "main", "develop" ] # Chạy khi push code lên 2 nhánh này
+    branches: [ "main" ]
   pull_request:
-    branches: [ "main" ]         # Chạy khi tạo Pull Request vào main
+    branches: [ "main" ]
 
 jobs:
   build:
-    runs-on: ubuntu-latest # Sử dụng máy ảo Linux để build cho nhẹ và nhanh
+    runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+    - uses: actions/checkout@v4
 
-      - name: Setup .NET
-        uses: actions/setup-dotnet@v4
-        with:
-          dotnet-version: '8.0.x' # Hoặc version bạn đang dùng
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: '8.0.x' 
 
-      # SỬA LỖI Ở ĐÂY: Thêm 'FPRDB/' vào trước tên file
-      - name: Restore dependencies
-        run: dotnet restore FPRDB/FPRDB.sln 
+    # Bước 1: Restore
+    # Chỉ định file .sln để nó tải thư viện cho cả FPRDB và UnitTestProject1 cùng lúc
+    - name: Restore dependencies
+      run: dotnet restore FPRDB/FPRDB.sln
 
-      - name: Build
-        run: dotnet build FPRDB/FPRDB.sln --no-restore --configuration Release
+    # Bước 2: Build
+    # Build file .sln sẽ build luôn cả 2 project con bên trong
+    - name: Build
+      run: dotnet build FPRDB/FPRDB.sln --no-restore --configuration Release
 
-      # Với Test, chạy thẳng trên file Solution luôn, nó sẽ tự tìm project UnitTestProject1 để chạy
-      - name: Test
-        run: dotnet test FPRDB/FPRDB.sln --no-build --verbosity normal
+    # Bước 3: Test
+    # Quan trọng: Khi trỏ vào .sln, dotnet test đủ thông minh để tìm ra
+    # project nào là project test (UnitTestProject1) để chạy.
+    - name: Test
+      run: dotnet test FPRDB/FPRDB.sln --no-build --verbosity normal
