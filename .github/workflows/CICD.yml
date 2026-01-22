@@ -11,18 +11,20 @@ jobs:
     runs-on: ubuntu-latest # Sử dụng máy ảo Linux để build cho nhẹ và nhanh
 
     steps:
-    - uses: actions/checkout@v4 # Lấy code từ GitHub về máy ảo
+      - uses: actions/checkout@v4
 
-    - name: Setup .NET
-      uses: actions/setup-dotnet@v4
-      with:
-        dotnet-version: '8.0.x' # Cài đặt đúng phiên bản .NET bạn đang dùng
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x' # Hoặc version bạn đang dùng
 
-    - name: Restore dependencies
-      run: dotnet restore # Tải các thư viện NuGet
+      # SỬA LỖI Ở ĐÂY: Thêm 'FPRDB/' vào trước tên file
+      - name: Restore dependencies
+        run: dotnet restore FPRDB/FPRDB.sln 
 
-    - name: Build
-      run: dotnet build --no-restore --configuration Release # Biên dịch code
+      - name: Build
+        run: dotnet build FPRDB/FPRDB.sln --no-restore --configuration Release
 
-    - name: Test
-      run: dotnet test --no-build --verbosity normal # Chạy Unit Test
+      # Với Test, chạy thẳng trên file Solution luôn, nó sẽ tự tìm project UnitTestProject1 để chạy
+      - name: Test
+        run: dotnet test FPRDB/FPRDB.sln --no-build --verbosity normal
