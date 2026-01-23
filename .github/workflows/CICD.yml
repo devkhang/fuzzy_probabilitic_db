@@ -37,4 +37,4 @@ jobs:
     # SỬA LỖI 3: Chạy Test
     # Do đã build Release ở trên, nên file DLL sẽ nằm trong bin\Release
     - name: Test
-      run: vstest.console.exe FPRDB\UnitTestProject1\bin\Release\UnitTestProject1.dll
+      run: vstest.console.exe UnitTestProject1\bin\Release\UnitTestProject1.dll
