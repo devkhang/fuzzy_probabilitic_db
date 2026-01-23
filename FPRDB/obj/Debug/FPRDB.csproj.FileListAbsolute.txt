@@ -38,7 +38,6 @@ C:\Users\Admin\Documents\nam_2vs3\nghiencuu\NhomDuy\NCKH\FPRDB\bin\Debug\de\DevE
 C:\Users\Admin\Documents\nam_2vs3\nghiencuu\NhomDuy\NCKH\FPRDB\bin\Debug\es\DevExpress.Pdf.v19.2.Core.resources.dll
 C:\Users\Admin\Documents\nam_2vs3\nghiencuu\NhomDuy\NCKH\FPRDB\bin\Debug\ja\DevExpress.Pdf.v19.2.Core.resources.dll
 C:\Users\Admin\Documents\nam_2vs3\nghiencuu\NhomDuy\NCKH\FPRDB\bin\Debug\ru\DevExpress.Pdf.v19.2.Core.resources.dll
-C:\Users\Admin\Documents\nam_2vs3\nghiencuu\NhomDuy\NCKH\FPRDB\obj\Debug\FPRDB.csprojAssemblyReference.cache
 C:\Users\Admin\Documents\nam_2vs3\nghiencuu\NhomDuy\NCKH\FPRDB\obj\Debug\DXApplication1.Form1.resources
 C:\Users\Admin\Documents\nam_2vs3\nghiencuu\NhomDuy\NCKH\FPRDB\obj\Debug\DXApplication1.Properties.Resources.resources
 C:\Users\Admin\Documents\nam_2vs3\nghiencuu\NhomDuy\NCKH\FPRDB\obj\Debug\FPRDB.csproj.GenerateResource.cache
@@ -57,3 +56,4 @@ C:\Users\Admin\Documents\nam_2vs3\nghiencuu\NhomDuy\NCKH\FPRDB\bin\Debug\xunit.e
 C:\Users\Admin\Documents\nam_2vs3\nghiencuu\NhomDuy\NCKH\FPRDB\bin\Debug\xunit.assert.xml
 C:\Users\Admin\Documents\nam_2vs3\nghiencuu\NhomDuy\NCKH\FPRDB\bin\Debug\xunit.core.xml
 C:\Users\Admin\Documents\nam_2vs3\nghiencuu\NhomDuy\NCKH\FPRDB\bin\Debug\xunit.execution.desktop.xml
+C:\Users\Admin\Documents\nam_2vs3\nghiencuu\NhomDuy\NCKH\FPRDB\obj\Debug\FPRDB.csprojAssemblyReference.cache

@@ -8,31 +8,33 @@ on:
 
 jobs:
   build:
-    runs-on: windows-2019 # 1. ĐỔI TỪ UBUNTU SANG WINDOWS
+    runs-on: windows-2019
 
     steps:
     - uses: actions/checkout@v4
 
-    # 2. Cài đặt MSBuild (Công cụ build cho .NET Framework cũ)
     - name: Setup MSBuild
       uses: microsoft/setup-msbuild@v2
 
-    # 3. Cài đặt NuGet để tải thư viện
     - name: Setup NuGet
       uses: NuGet/setup-nuget@v2
 
-    # 4. Restore bằng NuGet (Thay vì dotnet restore)
+    - name: Setup VSTest
+      uses: darenm/Setup-VSTest@v1
+
+    # SỬA LỖI 1: Đường dẫn file .sln
+    # Hãy đảm bảo cấu trúc thư mục trên GitHub của bạn đúng là FPRDB/FPRDB.sln
+    # Nếu file .sln nằm ngay ngoài cùng, hãy xóa đoạn "FPRDB/" đi, chỉ để lại "FPRDB.sln"
     - name: Restore dependencies
       run: nuget restore FPRDB/FPRDB.sln
 
-    # 5. Build bằng MSBuild (Thay vì dotnet build)
+    # SỬA LỖI 2: Thêm cấu hình Release
+    # Mặc định MSBuild sẽ build ra Debug, nhưng bên dưới bạn lại test thư mục Release
+    # -> Phải ép nó build ra Release bằng lệnh /p:Configuration=Release
     - name: Build
-      run: msbuild FPRDB/FPRDB.sln 
-    - name: Setup VSTest
-      uses: darenm/Setup-VSTest@v1
-    # 6. Test
-    # Lưu ý: Nếu project Test của bạn cũng là .NET Framework cũ, hãy dùng lệnh này:
+      run: msbuild FPRDB/FPRDB.sln /p:Configuration=Release
+
+    # SỬA LỖI 3: Chạy Test
+    # Do đã build Release ở trên, nên file DLL sẽ nằm trong bin\Release
     - name: Test
-      run: |
-        vstest.console.exe FPRDB\UnitTestProject1\bin\Release\UnitTestProject1.dll
-      # Nếu lệnh trên lỗi, hãy thử tạm thời comment dòng Test lại để đảm bảo Build thành công trước.
+      run: vstest.console.exe FPRDB\UnitTestProject1\bin\Release\UnitTestProject1.dll
