@@ -8,33 +8,30 @@ on:
 
 jobs:
   build:
-    # Khuyên dùng windows-latest thay vì 2019 để có SDK mới nhất
     runs-on: windows-latest
 
     steps:
     - uses: actions/checkout@v4
 
-    # BƯỚC 1: Setup môi trường
-    # Thay thế hoàn toàn cho: setup-msbuild, setup-nuget, setup-vstest
+    # BƯỚC 1: Setup cả 2 công cụ (Nuget cho restore, Dotnet cho build)
+    - name: Setup NuGet
+      uses: NuGet/setup-nuget@v2
+      
     - name: Setup .NET
       uses: actions/setup-dotnet@v4
       with:
-        dotnet-version: 8.0.x # Hãy sửa thành version bạn đang dùng (VD: 6.0.x, 8.0.x)
+        dotnet-version: 8.0.x
 
-    # BƯỚC 2: Restore
-    # Thay thế cho: nuget restore
+    # BƯỚC 2: Restore bằng NuGet (BẮT BUỘC cho project cũ)
+    # Lệnh này sẽ tạo folder "packages" mà project đang tìm kiếm
     - name: Restore dependencies
-      run: dotnet restore FPRDB/FPRDB.sln
+      run: nuget restore FPRDB/FPRDB.sln
 
-    # BƯỚC 3: Build
-    # Thay thế cho: msbuild
-    # --no-restore: Tận dụng kết quả của bước trên để chạy nhanh hơn
+    # BƯỚC 3: Build bằng Dotnet
+    # --no-restore: Quan trọng! Báo cho dotnet biết là "tao đã restore rồi, đừng làm lại sai cách"
     - name: Build
       run: dotnet build FPRDB/FPRDB.sln --configuration Release --no-restore
 
     # BƯỚC 4: Test
-    # Thay thế cho: vstest.console.exe
-    # dotnet test thông minh hơn: Nó tự tìm project test trong Solution, không cần chỉ định file .dll cụ thể
-    # --no-build: Không build lại lần nữa (vì đã build ở bước 3)
     - name: Test
       run: dotnet test FPRDB/FPRDB.sln --configuration Release --no-build --verbosity normal
