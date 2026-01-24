@@ -7,8 +7,8 @@ C:\Users\Admin\Documents\nam_2vs3\nghiencuu\NhomDuy\NCKH\UnitTestProject2\bin\De
 C:\Users\Admin\Documents\nam_2vs3\nghiencuu\NhomDuy\NCKH\UnitTestProject2\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
 C:\Users\Admin\Documents\nam_2vs3\nghiencuu\NhomDuy\NCKH\UnitTestProject2\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
 C:\Users\Admin\Documents\nam_2vs3\nghiencuu\NhomDuy\NCKH\UnitTestProject2\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
-C:\Users\Admin\Documents\nam_2vs3\nghiencuu\NhomDuy\NCKH\UnitTestProject2\obj\Debug\UnitTestProject2.csprojAssemblyReference.cache
 C:\Users\Admin\Documents\nam_2vs3\nghiencuu\NhomDuy\NCKH\UnitTestProject2\obj\Debug\UnitTestProject2.csproj.CoreCompileInputs.cache
-C:\Users\Admin\Documents\nam_2vs3\nghiencuu\NhomDuy\NCKH\UnitTestProject2\obj\Debug\UnitTestProject2.csproj.CopyComplete
 C:\Users\Admin\Documents\nam_2vs3\nghiencuu\NhomDuy\NCKH\UnitTestProject2\obj\Debug\UnitTestProject2.dll
 C:\Users\Admin\Documents\nam_2vs3\nghiencuu\NhomDuy\NCKH\UnitTestProject2\obj\Debug\UnitTestProject2.pdb
+C:\Users\Admin\Documents\nam_2vs3\nghiencuu\NhomDuy\NCKH\UnitTestProject2\obj\Debug\UnitTestProject2.csproj.AssemblyReference.cache
+C:\Users\Admin\Documents\nam_2vs3\nghiencuu\NhomDuy\NCKH\UnitTestProject2\obj\Debug\UnitTest.384B57F8.Up2Date

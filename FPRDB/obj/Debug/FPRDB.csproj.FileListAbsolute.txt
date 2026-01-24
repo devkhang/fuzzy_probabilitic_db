@@ -18,7 +18,6 @@ C:\Users\Admin\Documents\nam_2vs3\nghiencuu\NhomDuy\NCKH\FPRDB\obj\Debug\DXAppli
 C:\Users\Admin\Documents\nam_2vs3\nghiencuu\NhomDuy\NCKH\FPRDB\obj\Debug\DXApplication1.Properties.Resources.resources
 C:\Users\Admin\Documents\nam_2vs3\nghiencuu\NhomDuy\NCKH\FPRDB\obj\Debug\FPRDB.csproj.GenerateResource.cache
 C:\Users\Admin\Documents\nam_2vs3\nghiencuu\NhomDuy\NCKH\FPRDB\obj\Debug\FPRDB.csproj.CoreCompileInputs.cache
-C:\Users\Admin\Documents\nam_2vs3\nghiencuu\NhomDuy\NCKH\FPRDB\obj\Debug\FPRDB.csproj.CopyComplete
 C:\Users\Admin\Documents\nam_2vs3\nghiencuu\NhomDuy\NCKH\FPRDB\obj\Debug\DXApplication1.exe
 C:\Users\Admin\Documents\nam_2vs3\nghiencuu\NhomDuy\NCKH\FPRDB\obj\Debug\DXApplication1.pdb
 C:\Users\Admin\Documents\nam_2vs3\nghiencuu\NhomDuy\NCKH\FPRDB\bin\Debug\xunit.abstractions.dll
@@ -32,7 +31,6 @@ C:\Users\Admin\Documents\nam_2vs3\nghiencuu\NhomDuy\NCKH\FPRDB\bin\Debug\xunit.e
 C:\Users\Admin\Documents\nam_2vs3\nghiencuu\NhomDuy\NCKH\FPRDB\bin\Debug\xunit.assert.xml
 C:\Users\Admin\Documents\nam_2vs3\nghiencuu\NhomDuy\NCKH\FPRDB\bin\Debug\xunit.core.xml
 C:\Users\Admin\Documents\nam_2vs3\nghiencuu\NhomDuy\NCKH\FPRDB\bin\Debug\xunit.execution.desktop.xml
-C:\Users\Admin\Documents\nam_2vs3\nghiencuu\NhomDuy\NCKH\FPRDB\obj\Debug\FPRDB.csprojAssemblyReference.cache
 C:\Users\Admin\Documents\nam_2vs3\nghiencuu\NhomDuy\NCKH\FPRDB\bin\Debug\DevExpress.Charts.v19.2.Core.dll
 C:\Users\Admin\Documents\nam_2vs3\nghiencuu\NhomDuy\NCKH\FPRDB\bin\Debug\DevExpress.Images.v19.2.dll
 C:\Users\Admin\Documents\nam_2vs3\nghiencuu\NhomDuy\NCKH\FPRDB\bin\Debug\DevExpress.Office.v19.2.Core.dll
@@ -86,3 +84,5 @@ C:\Users\Admin\Documents\nam_2vs3\nghiencuu\NhomDuy\NCKH\FPRDB\bin\Debug\de\DevE
 C:\Users\Admin\Documents\nam_2vs3\nghiencuu\NhomDuy\NCKH\FPRDB\bin\Debug\es\DevExpress.Web.ASPxSpellChecker.v19.2.resources.dll
 C:\Users\Admin\Documents\nam_2vs3\nghiencuu\NhomDuy\NCKH\FPRDB\bin\Debug\ja\DevExpress.Web.ASPxSpellChecker.v19.2.resources.dll
 C:\Users\Admin\Documents\nam_2vs3\nghiencuu\NhomDuy\NCKH\FPRDB\bin\Debug\ru\DevExpress.Web.ASPxSpellChecker.v19.2.resources.dll
+C:\Users\Admin\Documents\nam_2vs3\nghiencuu\NhomDuy\NCKH\FPRDB\obj\Debug\FPRDB.csproj.AssemblyReference.cache
+C:\Users\Admin\Documents\nam_2vs3\nghiencuu\NhomDuy\NCKH\FPRDB\obj\Debug\FPRDB.csproj.Up2Date
